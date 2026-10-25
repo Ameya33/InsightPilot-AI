@@ -39,6 +39,22 @@ InsightPilot-AI/
             └── index.ts
 ```
 
+## Concepts and Technologies Used
+
+| Concept | Technology / Application |
+|---|---|
+| Frontend Development | HTML, CSS, JavaScript |
+| Authentication | Supabase Auth |
+| Backend API | Supabase Edge Functions, TypeScript |
+| API Security | JWT Validation, CORS |
+| Workflow Automation | n8n |
+| Data Analysis | Revenue, Cost, Profit, and Margin Calculations |
+| Data Visualization | Charts and Business KPIs |
+| AI Integration | Automated Business Insights |
+| Report Generation | HTML-to-PDF Conversion |
+| Hosting | Netlify |
+| Version Control | Git and GitHub |
+
 ## How It Works
 
 1. Create an account or sign in with a verified email.
@@ -54,6 +70,29 @@ https://insightpilotai.netlify.app
 ## Sample Dataset
 
 The repository includes a sample sales spreadsheet for testing the reporting workflow. Use fictional or non-sensitive data when testing.
+
+
+
+## Screenshots
+
+### Homepage
+![InsightPilot AI Homepage](screenshots/Homepage.png)
+
+### Business Analysis Form
+![Business Analysis Form](screenshots/Form%20page.png)
+
+### Generated PDF Report
+![Generated Report Example](screenshots/Generated%20report%20example.png)
+
+### Product Sales Chart
+![Product Sales Chart](screenshots/product%20chart.png)
+
+### Profit by Product
+![Profit by Product](screenshots/profit%20by%20product.png)
+
+
+
+
 
 ## Security Notes
 
