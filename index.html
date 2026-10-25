@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Turn business spreadsheets into clear insights, charts, and professional PDF reports.">
+<title>InsightPilot — AI Business Analyst</title>
+<style>
+:root{--navy:#142d4e;--navy2:#1c416a;--teal:#10a58f;--teal-dark:#087f70;--ink:#1c2b3d;--muted:#66758a;--line:#e1e8ef;--bg:#f5f8fb;--white:#fff;--purple:#8064d8;--orange:#ef9f43;--coral:#e76f7a;--shadow:0 18px 55px rgba(20,45,78,.09)}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);line-height:1.5}a{color:inherit}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}.nav{height:78px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;gap:11px;align-items:center;font-weight:800;font-size:18px;letter-spacing:-.4px}.logo{width:39px;height:39px;border-radius:12px;background:linear-gradient(135deg,var(--teal),#5dd4b6);display:grid;place-items:center;color:white;font-weight:900;font-size:20px;box-shadow:0 8px 18px #10a58f35}.navlinks{display:flex;gap:25px;align-items:center;color:var(--muted);font-size:14px}.navlinks a{text-decoration:none}.nav-cta{background:var(--navy);color:white!important;padding:11px 17px;border-radius:11px;font-weight:650}.hero{background:radial-gradient(ellipse at 85% 15%,#28547c 0%,transparent 36%),linear-gradient(120deg,#102744,#183c61);color:white;padding:68px 0 78px;overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:55px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid #ffffff30;background:#ffffff0e;border-radius:999px;padding:7px 12px;color:#c8f7ed;font-size:12px;font-weight:700;letter-spacing:.6px;text-transform:uppercase}.dot{width:7px;height:7px;background:#5de0c2;border-radius:50%}h1{font-size:clamp(39px,5.3vw,62px);line-height:1.06;letter-spacing:-2.6px;margin:20px 0 19px;max-width:650px}.hero p{font-size:17px;color:#d1deeb;max-width:570px;line-height:1.8;margin:0 0 27px}.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;border-radius:12px;padding:13px 18px;font-weight:750;font-size:14px;cursor:pointer;text-decoration:none;transition:.18s}.btn-primary{background:var(--teal);color:white;box-shadow:0 8px 22px #10a58f38}.btn-primary:hover{background:var(--teal-dark);transform:translateY(-1px)}.btn-ghost{border:1px solid #ffffff45;color:white;background:#ffffff0b}.hero-note{font-size:12px!important;color:#aebfd2!important;margin-top:17px!important}.preview{background:#fff;color:var(--ink);padding:22px;border-radius:22px;box-shadow:0 28px 70px #07182e55;transform:rotate(1deg)}.preview-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.preview-top strong{font-size:14px}.pill{font-size:11px;color:#087f70;background:#e5f8f3;border-radius:999px;padding:5px 9px;font-weight:750}.metric-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.metric{padding:14px;border:1px solid var(--line);border-radius:12px}.metric span{font-size:11px;color:var(--muted)}.metric b{display:block;font-size:21px;letter-spacing:-.6px;margin-top:3px}.metric .green{color:#0b9b7f}.bars{height:112px;display:flex;align-items:end;gap:9px;padding:16px 8px 0;border-bottom:1px solid var(--line);margin-top:17px}.bar{flex:1;border-radius:5px 5px 0 0;min-height:12px}.chart-caption{display:flex;justify-content:space-between;color:var(--muted);font-size:11px;margin-top:9px}.section{padding:76px 0}.section-head{text-align:center;max-width:680px;margin:0 auto 35px}.kicker{color:var(--teal-dark);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:1.3px}.section h2{font-size:clamp(28px,3.5vw,40px);letter-spacing:-1.2px;margin:9px 0 12px;color:var(--navy)}.section-head p{color:var(--muted);margin:0}.features{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.feature{background:white;border:1px solid var(--line);border-radius:17px;padding:23px;box-shadow:0 5px 18px #142d4e05}.feature-icon{width:43px;height:43px;border-radius:13px;display:grid;place-items:center;font-size:20px;margin-bottom:17px}.feature h3{margin:0 0 7px;font-size:16px}.feature p{margin:0;color:var(--muted);font-size:13px;line-height:1.7}.workspace{padding:0 0 80px}.form-card{max-width:850px;margin:auto;background:white;border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);overflow:hidden}.form-head{padding:28px 32px;background:linear-gradient(115deg,#f0faf8,#f6f8fc);border-bottom:1px solid var(--line)}.form-head h2{font-size:26px;letter-spacing:-.8px;margin:0 0 6px;color:var(--navy)}.form-head p{margin:0;color:var(--muted);font-size:14px}.form-body{padding:30px 32px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:19px}.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}label{font-size:13px;font-weight:750;color:#35465b}.input,select,textarea{width:100%;border:1px solid #d7e0e9;border-radius:10px;padding:12px 13px;background:#fff;font:inherit;color:var(--ink);outline:none}.input:focus,select:focus,textarea:focus{border-color:var(--teal);box-shadow:0 0 0 3px #10a58f17}textarea{min-height:94px;resize:vertical}.drop{border:1.5px dashed #b9cbd5;border-radius:13px;padding:22px;text-align:center;background:#f9fcfd;cursor:pointer;transition:.2s}.drop:hover,.drop.drag{border-color:var(--teal);background:#f0fbf8}.drop-icon{font-size:25px}.drop strong{display:block;font-size:13px;margin:6px 0}.drop small{color:var(--muted);font-size:12px}.drop input{display:none}.file-name{font-size:12px;color:var(--teal-dark);font-weight:700;margin-top:8px;overflow-wrap:anywhere}.privacy{font-size:11px;color:var(--muted);line-height:1.6;margin:15px 0 19px}.submit-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap}.submit-row .btn{min-width:200px}.status{font-size:13px;color:var(--muted)}.status.error{color:#b42318}.status.success{color:#087f70}.result{display:none;margin-top:20px;border:1px solid #bde8da;background:#f0fbf7;border-radius:13px;padding:18px}.result.show{display:block}.result h3{margin:0 0 5px;color:#087f70}.result a{color:#087f70;font-weight:750}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.step{text-align:center;padding:12px}.step-num{width:42px;height:42px;margin:0 auto 13px;border-radius:14px;background:#e5f8f3;color:#087f70;display:grid;place-items:center;font-weight:850}.step h3{font-size:14px;margin:0 0 5px}.step p{font-size:12px;color:var(--muted);margin:0}.footer{background:#102744;color:#d5e0eb;padding:31px 0}.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}.footer small{color:#9eb2c8}.hidden{display:none!important}
+@media(max-width:850px){.hero-grid{grid-template-columns:1fr;gap:35px}.preview{max-width:520px;transform:none}.features{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.navlinks a:not(.nav-cta){display:none}}
+@media(max-width:560px){.wrap{width:min(100% - 28px,1160px)}.nav{height:67px}.hero{padding:50px 0 55px}h1{letter-spacing:-1.7px}.hero p{font-size:15px}.features{grid-template-columns:1fr}.section{padding:54px 0}.form-head,.form-body{padding:22px 18px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.steps{grid-template-columns:1fr 1fr}.metric b{font-size:18px}}
+.field-hint{display:block;margin-top:6px;color:#64748b;font-size:12px}.page-gate-note{padding:14px 16px;border:1px solid #cfe8e2;background:#f0fbf7;border-radius:12px;color:#24594f;font-size:13px;margin:14px 0}
+</style>
+</head>
+<body>
+<header class="wrap nav">
+  <a class="brand" href="#top" aria-label="InsightPilot home"><span class="logo">i</span><span>InsightPilot <span style="color:var(--teal)">AI</span></span></a>
+  <nav class="navlinks"><a href="#features">Features</a><a href="#how">How it works</a><a class="nav-cta" href="#account">Sign in to analyze ↗</a></nav>
+</header>
+<main id="top">
+<section class="hero"><div class="wrap hero-grid">
+  <div><div class="eyebrow"><span class="dot"></span> AI-powered business intelligence</div><h1>Your business data.<br>Clearer decisions.</h1><p>Turn Excel and CSV spreadsheets into business insights you can act on. Understand performance, uncover product trends and create a polished PDF report in minutes.</p><div class="actions"><a class="btn btn-primary" href="#account">Generate my report <span>→</span></a><a class="btn btn-ghost" href="#features">Explore features</a></div><p class="hero-note">For small businesses, retailers and online sellers. Turn your sales data into practical next steps.</p></div>
+  <div class="preview" aria-label="Illustrative analytics dashboard"><div class="preview-top"><strong>Business snapshot</strong><span class="pill">REPORT PREVIEW</span></div><div class="metric-grid"><div class="metric"><span>Total revenue</span><b>₹3,37,770</b></div><div class="metric"><span>Calculated profit</span><b class="green">₹1,47,780</b></div><div class="metric"><span>Recorded costs</span><b>₹1,89,990</b></div><div class="metric"><span>Profit margin</span><b>43.75%</b></div></div><div class="bars"><div class="bar" style="height:42%;background:#10a58f"></div><div class="bar" style="height:67%;background:#8064d8"></div><div class="bar" style="height:54%;background:#ef9f43"></div><div class="bar" style="height:86%;background:#e76f7a"></div><div class="bar" style="height:62%;background:#4285c5"></div><div class="bar" style="height:97%;background:#79a94b"></div><div class="bar" style="height:73%;background:#d46aab"></div></div><div class="chart-caption"><span>Illustrative chart</span><span>Color-coded performance</span></div></div>
+</div></section>
+<section class="section" id="features"><div class="wrap"><div class="section-head"><div class="kicker">From spreadsheet to strategy</div><h2>Everything you need to understand your numbers</h2><p>One simple workflow turns raw business data into a report you can share with your team or use to plan your next move.</p></div><div class="features">
+<div class="feature"><div class="feature-icon" style="background:#e5f8f3">▤</div><h3>Excel & CSV analysis</h3><p>Upload your business spreadsheet and transform rows into structured data for analysis.</p></div>
+<div class="feature"><div class="feature-icon" style="background:#f0eafe">◈</div><h3>Financial KPIs</h3><p>Calculate revenue, recorded costs, profit and profit margin from the data provided.</p></div>
+<div class="feature"><div class="feature-icon" style="background:#fff1df">▥</div><h3>Colorful charts</h3><p>See product performance and time-based trends with readable, multicolor visualizations.</p></div>
+<div class="feature"><div class="feature-icon" style="background:#ffe9ec">✦</div><h3>AI recommendations</h3><p>Get a clear summary, evidence-based observations, limitations and prioritized next steps.</p></div>
+<div class="feature"><div class="feature-icon" style="background:#e5efff">▧</div><h3>Professional PDF</h3><p>Generate a polished report that you can save, print or share with stakeholders.</p></div>
+<div class="feature"><div class="feature-icon" style="background:#e7f5e4">↗</div><h3>Simple workflow</h3><p>Move from raw spreadsheet data to a clear, shareable business report.</p></div>
+</div></div></section>
+
+
+<section class="section" id="insights-preview" style="padding-top:10px">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">See the story in your data</div>
+      <h2>Sales and profit, made easier to compare</h2>
+      <p>Example visuals show the kinds of comparisons that can help you understand revenue, product profitability, and sales mix.</p>
+    </div>
+    <div class="features" style="grid-template-columns:repeat(2,minmax(0,1fr))">
+      <div class="feature">
+        <h3>Monthly revenue trend</h3>
+        <p>Compare revenue month by month to spot growth and seasonal changes.</p>
+        <div aria-label="Illustrative monthly revenue bar chart" style="height:170px;display:flex;align-items:end;gap:12px;padding:18px 8px 8px;border-bottom:1px solid var(--line);margin-top:12px">
+          <div style="flex:1;text-align:center"><div style="height:54px;background:#10a58f;border-radius:6px 6px 0 0"></div><small>Jan</small></div>
+          <div style="flex:1;text-align:center"><div style="height:73px;background:#10a58f;border-radius:6px 6px 0 0"></div><small>Feb</small></div>
+          <div style="flex:1;text-align:center"><div style="height:65px;background:#10a58f;border-radius:6px 6px 0 0"></div><small>Mar</small></div>
+          <div style="flex:1;text-align:center"><div style="height:95px;background:#10a58f;border-radius:6px 6px 0 0"></div><small>Apr</small></div>
+          <div style="flex:1;text-align:center"><div style="height:118px;background:#10a58f;border-radius:6px 6px 0 0"></div><small>May</small></div>
+          <div style="flex:1;text-align:center"><div style="height:140px;background:#10a58f;border-radius:6px 6px 0 0"></div><small>Jun</small></div>
+        </div>
+        <small class="field-hint">Illustrative values — not live business data.</small>
+      </div>
+      <div class="feature">
+        <h3>Profit by product</h3>
+        <p>Compare product-level profit to identify top contributors and low-margin items.</p>
+        <div style="margin-top:20px;display:grid;gap:13px">
+          <div><div style="display:flex;justify-content:space-between;font-size:12px"><span>Product A</span><strong>₹42k</strong></div><div style="height:10px;background:#edf2f7;border-radius:99px"><div style="width:88%;height:100%;background:#8064d8;border-radius:99px"></div></div></div>
+          <div><div style="display:flex;justify-content:space-between;font-size:12px"><span>Product B</span><strong>₹31k</strong></div><div style="height:10px;background:#edf2f7;border-radius:99px"><div style="width:65%;height:100%;background:#4285c5;border-radius:99px"></div></div></div>
+          <div><div style="display:flex;justify-content:space-between;font-size:12px"><span>Product C</span><strong>₹19k</strong></div><div style="height:10px;background:#edf2f7;border-radius:99px"><div style="width:40%;height:100%;background:#ef9f43;border-radius:99px"></div></div></div>
+          <div><div style="display:flex;justify-content:space-between;font-size:12px"><span>Product D</span><strong>₹12k</strong></div><div style="height:10px;background:#edf2f7;border-radius:99px"><div style="width:25%;height:100%;background:#e76f7a;border-radius:99px"></div></div></div>
+        </div>
+        <small class="field-hint">Illustrative values — not live business data.</small>
+      </div>
+      <div class="feature">
+        <h3>Sales mix</h3>
+        <p>A pie-style view can show how much each product contributes to total sales.</p>
+        <div style="display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin-top:20px">
+          <div aria-label="Illustrative pie chart" style="width:142px;height:142px;border-radius:50%;background:conic-gradient(#10a58f 0 38%,#8064d8 38% 64%,#ef9f43 64% 82%,#e76f7a 82% 100%)"></div>
+          <div style="font-size:12px;display:grid;gap:8px">
+            <span>🟩 Product A — 38%</span><span>🟪 Product B — 26%</span><span>🟧 Product C — 18%</span><span>🟥 Product D — 18%</span>
+          </div>
+        </div>
+        <small class="field-hint">Illustrative values — not live business data.</small>
+      </div>
+      <div class="feature">
+        <h3>Year-over-year revenue</h3>
+        <p>Compare yearly totals to understand longer-term performance.</p>
+        <div style="margin-top:18px;display:grid;gap:14px">
+          <div><div style="display:flex;justify-content:space-between;font-size:12px"><span>2024</span><strong>₹8.2L</strong></div><div style="height:12px;background:#edf2f7;border-radius:99px"><div style="width:62%;height:100%;background:#4285c5;border-radius:99px"></div></div></div>
+          <div><div style="display:flex;justify-content:space-between;font-size:12px"><span>2025</span><strong>₹10.1L</strong></div><div style="height:12px;background:#edf2f7;border-radius:99px"><div style="width:77%;height:100%;background:#8064d8;border-radius:99px"></div></div></div>
+          <div><div style="display:flex;justify-content:space-between;font-size:12px"><span>2026</span><strong>₹13.1L</strong></div><div style="height:12px;background:#edf2f7;border-radius:99px"><div style="width:100%;height:100%;background:#10a58f;border-radius:99px"></div></div></div>
+        </div>
+        <small class="field-hint">Illustrative values — not live business data.</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="workspace" id="account" style="padding-bottom:24px">
+  <div class="wrap">
+    <div class="form-card">
+      <div class="form-head">
+        <div class="kicker">Account access</div>
+        <h2>Welcome to InsightPilot AI</h2>
+        <p>Sign in or create an account to continue to your secure business analysis workspace.</p>
+      </div>
+      <div class="form-body">
+        <div class="form-grid">
+          <div class="field"><label for="authEmail">Email address</label><input class="input" id="authEmail" type="email" autocomplete="email" required placeholder="you@example.com"></div>
+          <div class="field"><label for="authPassword">Password</label><input class="input" id="authPassword" type="password" autocomplete="current-password" minlength="8" required placeholder="At least 8 characters"></div>
+        </div>
+        <div class="submit-row" style="margin-top:16px">
+          <button class="btn btn-primary" id="signUpBtn" type="button">Create account</button>
+          <button class="btn" id="signInBtn" type="button" style="background:#e9eef4;color:#18324e">Sign in</button>
+          <button class="btn" id="signOutBtn" type="button" style="background:#e9eef4;color:#18324e" hidden>Sign out</button>
+        </div>
+        <p class="status" id="authStatus" role="status" aria-live="polite">Not signed in.</p>
+        <p class="privacy">Email verification is required. Never share your password.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="workspace hidden" id="analyze" aria-hidden="true"><div class="wrap"><div class="form-card"><div class="form-head"><div class="kicker">Step 2 of 2 · Business workspace</div><h2>Enter your business details</h2><p>Complete the details below and upload a sample or your own business spreadsheet to create your report.</p></div><div class="form-body"><form id="reportForm">
+<div class="form-grid">
+<div class="field"><label for="businessName">Business name *</label><input class="input" id="businessName" name="business_name" type="text" placeholder="e.g. Sunrise Store" required minlength="2" maxlength="120" autocomplete="organization" pattern="(?=.*[A-Za-z0-9])[A-Za-z0-9][A-Za-z0-9 .,&amp;'()/-]{0,119}" title="Enter a valid company name using letters, numbers, spaces, or common punctuation."></div>
+<div class="field"><label for="industry">Industry *</label><select id="industry" name="industry" required><option value="">Choose your industry</option><option>Retail</option><option>E-commerce</option><option>Manufacturing</option><option>Professional services</option><option>Food & hospitality</option><option>Healthcare</option><option>Other</option></select></div>
+<div class="field"><label for="period">Reporting date *</label><input class="input" id="period" name="reporting_period" type="date" required autocomplete="off"><small class="field-hint">Choose a date from the calendar. Text is not accepted.</small></div>
+<div class="field"><label for="email">Email for report (optional)</label><input class="input" id="email" name="email" type="email" placeholder="you@company.com" autocomplete="email"></div>
+<div class="field full"><label>Business data file *</label><label class="drop" id="dropZone" for="businessFile"><div class="drop-icon">⇧</div><strong>Choose a file or drag it here</strong><small>CSV, XLS or XLSX · Upload business data you are authorized to share</small><div style="margin-top:10px"><a href="InsightPilot_Sample_Sales_Data.xlsx" download style="font-weight:750;color:var(--teal-dark)">Download sample Excel sheet ↗</a></div><div class="file-name" id="fileName">No file selected</div><input id="businessFile" name="business_file" type="file" accept=".csv,.xls,.xlsx,text/csv,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" required></label></div>
+<div class="field full"><label for="question">What would you like to understand? (optional)</label><textarea id="question" name="business_question" placeholder="e.g. Which products contribute most to profit? How can we reduce costs?"></textarea></div>
+</div>
+
+<div class="submit-row"><button class="btn btn-primary" id="submitBtn" type="submit">Generate my report <span>→</span></button><span class="status" id="status" role="status" aria-live="polite">Your spreadsheet is processed securely to prepare your business report.</span></div>
+<div class="result" id="result"><h3>Report response received</h3><p id="resultMessage">Your report is ready.</p><a id="reportLink" href="#" target="_blank" rel="noopener" class="hidden">Open or download your PDF →</a></div>
+</form></div></div></div></section>
+<section class="section" id="how" style="padding-top:10px"><div class="wrap"><div class="section-head"><div class="kicker">How it works</div><h2>Three steps. One clearer picture.</h2><p>Upload your data, explore the results, and use clear visual insights to plan your next move.</p></div><div class="steps"><div class="step"><div class="step-num">01</div><h3>Upload</h3><p>Share a CSV or Excel file and describe your business.</p></div><div class="step"><div class="step-num">02</div><h3>Analyze</h3><p>Key metrics are calculated and patterns are summarized into useful business insights.</p></div><div class="step"><div class="step-num">03</div><h3>Review</h3><p>Review the findings and open your downloadable report.</p></div><div class="step"><div class="step-num">04</div><h3>Take action</h3><p>Use the findings as a starting point for informed business decisions.</p></div></div></div></section>
+</main>
+<footer class="footer"><div class="wrap footer-inner"><div class="brand"><span class="logo">i</span><span>InsightPilot AI</span></div><small>Business insights from your data. Replace this brand name with your own before launch.</small></div></footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+// Supabase frontend configuration. The publishable key is designed for browser use.
+const SUPABASE_URL = "https://kvllbeicovmzolaqllxg.supabase.co";
+const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_yWQ0EKnI-NMnIO4vhzakRA_RYc5Vl8a";
+// IMPORTANT: This is the protected server-side gateway, NOT the n8n webhook.
+// Deploy a Supabase Edge Function named generate-report before enabling report generation.
+const REPORT_FUNCTION_URL = `${SUPABASE_URL}/functions/v1/generate-report`;
+
+const authStatus = document.getElementById('authStatus');
+const authEmail = document.getElementById('authEmail');
+const authPassword = document.getElementById('authPassword');
+const signUpBtn = document.getElementById('signUpBtn');
+const signInBtn = document.getElementById('signInBtn');
+const signOutBtn = document.getElementById('signOutBtn');
+const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
+let currentSession = null;
+
+function setAuthStatus(message, type='') {
+  authStatus.textContent = message;
+  authStatus.className = `status ${type}`.trim();
+}
+function showAccountPage(message = '') {
+  const accountSection = document.getElementById('account');
+  const reportSection = document.getElementById('analyze');
+  reportSection.classList.add('hidden');
+  reportSection.setAttribute('aria-hidden', 'true');
+  accountSection.classList.remove('hidden');
+  if (message) setAuthStatus(message);
+}
+
+function showReportPage() {
+  const accountSection = document.getElementById('account');
+  const reportSection = document.getElementById('analyze');
+  accountSection.classList.add('hidden');
+  reportSection.classList.remove('hidden');
+  reportSection.setAttribute('aria-hidden', 'false');
+  setTimeout(() => reportSection.scrollIntoView({behavior: 'smooth', block: 'start'}), 80);
+}
+
+function updateAuthUI(session, navigate = false) {
+  currentSession = session;
+  const signedIn = Boolean(session);
+  signOutBtn.hidden = !signedIn;
+  signInBtn.hidden = signedIn;
+  signUpBtn.hidden = signedIn;
+
+  // The report details page is not available until a session exists.
+  if (signedIn) {
+    document.getElementById('reportForm').querySelectorAll('input,select,textarea,button').forEach(el => {
+      el.disabled = false;
+    });
+    if (navigate) showReportPage();
+    else {
+      document.getElementById('analyze').classList.remove('hidden');
+      document.getElementById('analyze').setAttribute('aria-hidden', 'false');
+      document.getElementById('account').classList.add('hidden');
+    }
+    setAuthStatus(`Signed in as ${session.user.email}.`, 'success');
+  } else {
+    document.getElementById('reportForm').querySelectorAll('input,select,textarea,button').forEach(el => {
+      el.disabled = true;
+    });
+    showAccountPage('Not signed in. Sign in with a verified email to continue.');
+  }
+}
+
+signUpBtn.addEventListener('click', async () => {
+  const email = authEmail.value.trim();
+  const password = authPassword.value;
+  if (!email || password.length < 8) { setAuthStatus('Enter a valid email and a password with at least 8 characters.', 'error'); return; }
+  signUpBtn.disabled = true;
+  try {
+    const { data, error } = await supabaseClient.auth.signUp({
+      email, password,
+      options: { emailRedirectTo: window.location.origin }
+    });
+    if (error) throw error;
+    if (data.session) {
+      updateAuthUI(data.session);
+      setAuthStatus('Account created and signed in. Verify your email if prompted.', 'success');
+    } else {
+      setAuthStatus('Account request submitted. Check your inbox and click the confirmation link before signing in.', 'success');
+    }
+  } catch (err) { setAuthStatus(err.message || 'Could not create account.', 'error'); }
+  finally { signUpBtn.disabled = false; }
+});
+signInBtn.addEventListener('click', async () => {
+  const email = authEmail.value.trim();
+  const password = authPassword.value;
+  if (!email || !password) { setAuthStatus('Enter your email and password.', 'error'); return; }
+  signInBtn.disabled = true;
+  try {
+    const { data, error } = await supabaseClient.auth.signInWithPassword({ email, password });
+    if (error) throw error;
+    updateAuthUI(data.session, true);
+    setAuthStatus(`Signed in as ${data.user.email}.`, 'success');
+  } catch (err) { setAuthStatus(err.message || 'Could not sign in. Confirm your email and try again.', 'error'); }
+  finally { signInBtn.disabled = false; }
+});
+signOutBtn.addEventListener('click', async () => {
+  const { error } = await supabaseClient.auth.signOut();
+  if (error) { setAuthStatus(error.message, 'error'); return; }
+  updateAuthUI(null);
+});
+supabaseClient.auth.onAuthStateChange((event, session) => updateAuthUI(session, event === 'SIGNED_IN'));
+supabaseClient.auth.getSession().then(({data}) => updateAuthUI(data.session, false));
+
+window.addEventListener('hashchange', () => {
+  if (window.location.hash === '#analyze' && !currentSession) {
+    history.replaceState(null, '', '#account');
+    showAccountPage('Please sign in first to access the business details page.');
+    document.getElementById('account').scrollIntoView({behavior:'smooth'});
+  }
+});
+
+
+
+// Guide visitors through account access before opening the report form.
+document.querySelectorAll('a[href="#account"]').forEach(link => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+    if (currentSession) {
+      showReportPage();
+    } else {
+      showAccountPage('Please sign in or create an account and verify your email first.');
+      document.getElementById('account').scrollIntoView({behavior:'smooth', block:'start'});
+    }
+  });
+});
+
+
+const form = document.getElementById('reportForm');
+const fileInput = document.getElementById('businessFile');
+const businessNameInput = document.getElementById('businessName');
+const periodInput = document.getElementById('period');
+const fileName = document.getElementById('fileName');
+const dropZone = document.getElementById('dropZone');
+const statusEl = document.getElementById('status');
+const submitBtn = document.getElementById('submitBtn');
+const result = document.getElementById('result');
+const resultMessage = document.getElementById('resultMessage');
+const reportLink = document.getElementById('reportLink');
+fileInput.addEventListener('change',()=>{fileName.textContent=fileInput.files[0]?.name||'No file selected'});
+['dragenter','dragover'].forEach(ev=>dropZone.addEventListener(ev,e=>{e.preventDefault();dropZone.classList.add('drag')}));
+['dragleave','drop'].forEach(ev=>dropZone.addEventListener(ev,e=>{e.preventDefault();dropZone.classList.remove('drag')}));
+dropZone.addEventListener('drop',e=>{if(e.dataTransfer.files.length){fileInput.files=e.dataTransfer.files;fileName.textContent=fileInput.files[0].name}});
+form.addEventListener('submit',async e=>{
+ e.preventDefault(); result.classList.remove('show'); reportLink.classList.add('hidden');
+ const { data: sessionData, error: sessionError } = await supabaseClient.auth.getSession();
+ const verifiedSession = sessionData?.session;
+ if (sessionError || !verifiedSession || !verifiedSession.user?.email_confirmed_at) {
+   updateAuthUI(null);
+   statusEl.textContent = 'Please sign in with a verified email before generating a report.';
+   statusEl.className = 'status error';
+   showAccountPage('Your session is missing or your email is not verified. Please sign in again.');
+   document.getElementById('account').scrollIntoView({behavior:'smooth'});
+   return;
+ }
+ currentSession = verifiedSession;
+ const companyName=businessNameInput.value.trim();
+ if(companyName.length<2 || companyName.length>120 || !/[A-Za-z0-9]/.test(companyName) || !/^[A-Za-z0-9][A-Za-z0-9 .,&'()\/-]*$/.test(companyName)){businessNameInput.setCustomValidity('Enter a valid company name using letters, numbers, spaces, and common punctuation.');businessNameInput.reportValidity();businessNameInput.setCustomValidity('');return}
+ const dateValue=periodInput.value; const parsedDate=new Date(`${dateValue}T00:00:00.000Z`);
+  if(!/^\d{4}-\d{2}-\d{2}$/.test(dateValue) || Number.isNaN(parsedDate.getTime()) || parsedDate.toISOString().slice(0,10)!==dateValue){periodInput.setCustomValidity('Choose a valid date using the date picker.');periodInput.reportValidity();periodInput.setCustomValidity('');return}
+ businessNameInput.value=companyName;
+ if(!fileInput.files[0]){statusEl.textContent='Please choose a CSV or Excel file.';statusEl.className='status error';return}
+ if(!currentSession){statusEl.textContent='Please sign in with a verified account before generating a report.';statusEl.className='status error';return}
+ if(SUPABASE_PUBLISHABLE_KEY.includes('PASTE_YOUR_')){statusEl.textContent='Setup needed: add your Supabase publishable key first.';statusEl.className='status error';return}
+ const file=fileInput.files[0];
+ if(file.size>15*1024*1024){statusEl.textContent='This starter site allows files up to 15 MB. Increase the limit only after configuring server-side limits.';statusEl.className='status error';return}
+ const allowed=/\.(csv|xls|xlsx)$/i.test(file.name);
+ if(!allowed){statusEl.textContent='Please upload a CSV, XLS, or XLSX file.';statusEl.className='status error';return}
+ const data=new FormData(form); data.set('business_file',file);
+ submitBtn.disabled=true;submitBtn.style.opacity='.65';submitBtn.textContent='Analyzing your data…';statusEl.className='status';statusEl.textContent='Sending your file to the authenticated report gateway. Please keep this tab open.';
+ try{
+  const response=await fetch(REPORT_FUNCTION_URL,{
+    method:'POST',
+    headers:{
+      'Authorization':`Bearer ${currentSession.access_token}`,
+      'apikey':SUPABASE_PUBLISHABLE_KEY
+    },
+    body:data
+  });
+  const raw=await response.text(); let payload; try{payload=JSON.parse(raw)}catch{payload={message:raw}}
+  if(!response.ok)throw new Error(payload.message||payload.error||`Workflow returned HTTP ${response.status}`);
+  result.classList.add('show');
+  const link=payload.pdfUrl||payload.downloadUrl||payload.webViewLink||payload.url||payload.reportUrl;
+  resultMessage.textContent=payload.message||payload.summary|| (link?'Your report has been generated. Use the link below.':'The workflow responded successfully. Configure it to return a JSON object containing pdfUrl or downloadUrl to show a download link.');
+  if(link){try{const u=new URL(link);if(u.protocol==='https:'||u.protocol==='http:'){reportLink.href=u.href;reportLink.classList.remove('hidden')}}catch{}}
+  statusEl.className='status success';statusEl.textContent='Workflow response received.';
+ }catch(err){statusEl.className='status error';statusEl.textContent='Could not complete the report: '+err.message+'. Check that the Supabase generate-report Edge Function is deployed and configured to call n8n securely.'}
+ finally{submitBtn.disabled=false;submitBtn.style.opacity='1';submitBtn.innerHTML='Generate my report <span>→</span>'}
+});
+</script>
+</body></html>
